@@ -1,0 +1,3 @@
+include ':developlib'
+include ':app'
+rootProject.name = "AndroidLib"

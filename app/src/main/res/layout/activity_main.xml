@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <com.developlib.widget.shapeview.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:shapeCornerRadius="8dp"
+        app:shapeElevation="2dp"
+        app:shapeFillColor="@color/colorAccent"
+        app:shapeStrokeColor="@color/colorPrimary"
+        app:shapeStrokeWidth="1dp">
+
+        <ImageView
+            android:id="@+id/imgCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name" />
+
+    </com.developlib.widget.shapeview.ShapeLinearLayout>
+
+    <com.developlib.widget.shapeview.ShapeFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:shapeEndColor="@color/colorAccent"
+        app:shapeOrientation="TOP_BOTTOM"
+        app:shapeElevation="2dp"
+        app:shapeStartColor="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imageNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name" />
+
+    </com.developlib.widget.shapeview.ShapeFrameLayout>
+
+</LinearLayout>
