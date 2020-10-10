@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'com.github.dcendents.android-maven'
-group='https://gitee.com'
+group='com.gitee.android_coder'
 
 android {
     compileSdkVersion 30
