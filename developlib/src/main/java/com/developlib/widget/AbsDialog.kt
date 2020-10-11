@@ -19,6 +19,7 @@ abstract class AbsDialog(context: Context, style: Int = R.style.CustomDialogStyl
         initDialogSize()
         setCancelable(cancelable())
         setCanceledOnTouchOutside(canceledOnTouchOutside())
+        initDialog()
     }
 
     private fun initDialogSize() {
@@ -56,5 +57,10 @@ abstract class AbsDialog(context: Context, style: Int = R.style.CustomDialogStyl
      * 点击外部区域是否可关闭
      */
     open fun canceledOnTouchOutside(): Boolean = true
+
+    /**
+     * 初始化对话框
+     */
+    open fun initDialog() {}
 
 }
