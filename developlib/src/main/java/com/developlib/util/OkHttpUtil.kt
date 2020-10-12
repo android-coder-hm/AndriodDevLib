@@ -109,11 +109,11 @@ fun downloadFile(url: String, saveFile: File, downloadListener: ((downloadedSize
 private fun executeRequest(request: Request): String {
     val response = ConfigSingleton.getOkHttpClient().newCall(request).execute()
     if (response.isSuccessful) {
-        return response.body.toString()
+        return response.body?.string() ?: ""
     } else {
-        throw HttpException(response.code, response.message)
+        throw HttpException(response.code.toString(), response.message)
     }
 }
 
 
-class HttpException(val code: Int, val httpExceptionMsg: String) : Exception()
+class HttpException(val code: String, val httpExceptionMsg: String) : Exception()
